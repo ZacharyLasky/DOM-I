@@ -97,7 +97,7 @@ let contact = document.querySelectorAll('.contact h4');
 contact[0].textContent = siteContent['contact']['contact-h4'];
 
 let contactPs = document.querySelectorAll('.contact p');
-contactPs[0].textContent = siteContent['contact']['address'];
+contactPs[0].innerHTML = '123 Way 456 Street <br> Somewhere, USA'
 contactPs[1].textContent = siteContent['contact']['phone'];
 contactPs[2].textContent = siteContent['contact']['email'];
 
