@@ -74,6 +74,7 @@ element2.style.color = 'green';
 
 let dom = document.querySelector('.cta-text > h1');
 dom.textContent = siteContent['cta']['h1'];
+dom.innerHTML = 'DOM <br> IS <br> AWESOME';
 
 let but = document.querySelector('.cta-text > button');
 but.textContent = siteContent['cta']['button'];
@@ -102,9 +103,3 @@ contactPs[2].textContent = siteContent['contact']['email'];
 
 let footer = document.querySelector('footer');
 footer.textContent = siteContent['footer']['copyright'];
-
-
-
-
-
-
