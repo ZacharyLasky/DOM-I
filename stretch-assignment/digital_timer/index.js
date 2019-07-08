@@ -7,7 +7,7 @@ let start = document.querySelector('.button button');
 console.log(start);
 
 function changeSeconds() {
-    if (secondOnes.textContent === "-") {
+    if (secondOnes.textContent === "0") {
         secondOnes.textContent = 1;
     }
     else if (secondOnes.textContent === "1") {
@@ -35,7 +35,7 @@ function changeSeconds() {
         secondOnes.textContent = 9;
     }
     else if (secondOnes.textContent === "9") {
-        secondOnes.textContent = 0;
+        secondOnes.textContent = "O";
         secondTens.textContent = 1;
         digits.forEach(digit => {
             digit.classList.add('redDigit');
@@ -46,7 +46,11 @@ function changeSeconds() {
 
 
 function changeMs() {
-    if (msHundreds.textContent === "-") {
+    if (secondTens.textContent === "1") {
+        msHundreds.textContent = "O";
+        msTens.textContent = "O";
+    }
+    else if (msHundreds.textContent === "0") {
         msHundreds.textContent = 1;
     }
     else if (msHundreds.textContent === "1") {
@@ -74,13 +78,17 @@ function changeMs() {
         msHundreds.textContent = 9;
     }
     else if (msHundreds.textContent === "9") {
-        msHundreds.textContent === 0;
+        msHundreds.textContent = "0";
     }
 }
 
+
+
 start.addEventListener('click', event => {
-    window.setInterval(changeSeconds, 1000);
     window.setInterval(changeMs, 100);
+    window.setInterval(changeSeconds, 1000);
 })
+
+
 
 
